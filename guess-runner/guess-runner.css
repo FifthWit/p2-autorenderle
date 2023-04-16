@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;800&display=swap');
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 25px);
+    height: 50px;
+    margin: 0 10px 0 10px;
+    border-bottom: #cccccc 1px solid;
+    color: #ffffff;
+    line-height: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(155deg) brightness(105%) contrast(100%);
+    height: 30px;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+body {
+    background-image: radial-gradient( circle farthest-corner at 83.7% 4.3%,  rgb(21, 21, 21) 0%, rgb(34, 34, 34) 90% );
+    color: #ffffff;
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+
+    display: flex;
+	justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0 10px;
+}
+
+.info-container {
+    align-self: center;
+
+    background: rgba(14, 14, 14, 0.75);
+    border: solid;
+    border-color: rgba(152, 152, 152, 0.427);
+    border-radius: 5px;
+    border-width: 3px;
+    color: #fff;
+
+    font-size: large;
+    line-height: 1.5rem;
+    margin: auto;
+    min-height: 21rem;
+    overflow-y: auto;
+    padding: 1em;
+
+    position: absolute;
+    height: 25rem;
+    width: 27rem;
+    z-index: 5;
+
+    transition: opacity 0.1s;
+}
+
+.exit {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(155deg) brightness(105%) contrast(100%);
+    height: 40px;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
+
+.exit:hover {
+    cursor: pointer;
+}
+
+.endgame-container {
+    align-self: center;
+
+    background: rgba(0,0,0,.95);
+    border: solid;
+    border-color: #0072EF;
+    border-radius: 5px;
+    border-width: 3px;
+    color: #fff;
+
+    font-size: large;
+    line-height: 1.5rem;
+    margin: auto;
+    min-height: 21rem;
+    overflow-y: auto;
+    padding: 1em;
+
+    position: absolute;
+    height: 25rem;
+    width: 27rem;
+    z-index: 5;
+
+    transition: opacity 0.1s;
+}
+
+.play-again {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(155deg) brightness(105%) contrast(100%);
+    height: 40px;
+    
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+
+.video-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	width: 48vw;
+	height: 27vw;
+	background: #121212;
+    border-radius: 7px;
+    border: 2px solid rgba(200, 200, 200, 0.615);
+}
+
+.rank-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rank-guess {
+    font-size: 1.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: inherit;
+    width: 8em;
+}
+
+@keyframes submit-in {
+    0% {
+        background-color: #0072EF;
+        border: 1px solid #0072EF;
+    }
+    100% {
+        background-color: #0055b1;
+        border: 1px solid #0055b1;
+    }
+}
+
+@keyframes submit-out {
+    0% {
+        background-color: #0055b1;
+        border: 1px solid #0055b1;
+    }
+    100% {
+        background-color: #0072EF;
+        border: 1px solid #0072EF;
+    }
+}
+
+#whorun-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.runner-answer {
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 5px;
+    height: inherit;
+    width: 8em;
+    animation: submit-out 0.1s forwards linear;
+    margin: 5px;
+}
+
+.runner-answer:hover {
+    animation: submit-in 0.1s forwards linear;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 25px);
+    height: 50px;
+    margin: 0 10px 0 10px;
+    border-top: #ffffff 1px solid;
+
+    line-height: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+a:link {
+    color: #0072EF;
+}
+
+a:visited {
+    color: #0055b1;
+}

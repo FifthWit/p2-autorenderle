@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700;800&display=swap');
+
+html {
+    background-image: url("images/bg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.introtext {
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 125px;
+}
+
+.button-card {
+    width: 425px;
+    height: 500px;
+    background: rgb(50,50,50);
+    background: linear-gradient(0deg, rgba(50,50,50,0.7791317210477942) 0%, rgba(60,60,60,0.664285782672444) 100%); 
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+
+}
+
+.srlogo {
+    aspect-ratio: 1 / 1;
+    height: 105px;
+    margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 25px);
+    height: 50px;
+    margin: 0 10px 0 10px;
+    border-bottom: #cccccc 1px solid;
+    color: #ffffff;
+    line-height: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+	color: #f8f8f8;
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gamemode-buttons {
+    height: fit-content;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes submit-in {
+    0% {
+        background-color: #0072EF;
+        border: 1px solid #0072EF;
+    }
+    100% {
+        background-color: #0055b1;
+        border: 1px solid #0055b1;
+    }
+}
+
+@keyframes submit-out {
+    0% {
+        background-color: #0055b1;
+        border: 1px solid #0055b1;
+    }
+    100% {
+        background-color: #0072EF;
+        border: 1px solid #0072EF;
+    }
+}
+
+.gamemode-button {
+    font-size: 2rem;
+    color: #ffffff;
+
+    border-radius: 5px;
+    height: 4rem;
+    width: 12em;
+    margin: 3px auto;
+    margin-left: 20px;
+
+
+    animation: submit-out 0.1s forwards linear;
+}
+
+.gamemode-button:hover {
+    animation: submit-in 0.1s forwards linear;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 25px);
+    height: 50px;
+    margin: 0 10px 0 10px;
+    border-top: #cccccc 1px solid;
+    color: #cccccc;
+    line-height: 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+a:link {
+    color: #0072EF;
+}
+
+a:visited {
+    color: #0055b1;
+}

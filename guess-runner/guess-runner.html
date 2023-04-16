@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the Runner</title>
+    <link rel="stylesheet" href="guess-runner.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+<header>
+    <div class="header-left">
+        <img class="icon" src="../common/home-1393-svgrepo-com.svg" alt="Home" onclick="window.location.href='../index.html'">
+    </div>
+    <div class="header-center">
+        <h1>Guess The Runner</h1>
+    </div>
+    <div class="header-right">
+        <img class="icon" src="../common/important-message-1448-svgrepo-com.svg" alt="Information" onclick="openCloseInfo()">
+    </div>
+</header>
+<body>
+    <div class="app-container">
+        <div class="info-container hidden">
+            <h2>How to Play</h2>
+            <image class="exit" src="../common/cross-small-svgrepo-com.svg" alt="Exit" onclick="openCloseInfo()">
+            <ul>
+                <li>A top 40 autorender for a random map will play</li>
+                <li>Guess the user who's run it is from the multiple choice</li>
+            </ul>
+            <div class="filters">
+                <br><h2>Run Filters</h2>
+                <p>Note: Changing this will reset your streak!</p>
+                <input type="radio" name="filter" id="all" value="All Runs" onclick="changeFilter('all')" checked>
+                <label for="all">All Runs</label><br>
+                <input type="radio" name="filter" id="sp" value="Only Singleplayer" onclick="changeFilter('sp')">
+                <label for="sp">Only Singleplayer</label><br>
+                <input type="radio" name="filter" id="coop" value="Only Co-op" onclick="changeFilter('coop')">
+                <label for="coop">Only Co-op</label>
+            </div>
+        </div>
+        <div class="endgame-container hidden" id="endgame-container">
+            <h2 id="game-output"></h2>
+            <ul>
+                <li id="gameoutput-1">This run is rank XX on the leaderboards</li>
+                <li id="gameoutput-2">You've made a guess in XX.X seconds!</li>
+                <li id="gameoutput-3">Current streak: XX</li>
+                <li id="gameoutput-4">High-score streak: XX</li>
+            </ul>
+            <button class="play-again" onclick="playAgain()">Play Again</button>
+        </div>
+        <div class="game-container">
+            <video class="video-player" id="player" controls autoplay></video>
+            <div class="runner-input-container">
+                <h1 id="whorun-text">Whose run is this?</h1>
+                <button class="runner-answer" id="ans1" onclick="runnerGuess1()"></button>
+                <button class="runner-answer" id="ans2" onclick="runnerGuess2()"></button>
+                <button class="runner-answer" id="ans3" onclick="runnerGuess3()"></button>
+                <button class="runner-answer" id="ans4" onclick="runnerGuess4()"></button>
+            </div>
+            <div class="skip-button">
+                <button class="skip" id="skip" onclick="skip()">Skip (Broken demo)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link JS Files -->
+    <script src="../common/maplist.js"></script>
+    <script src="../common/jquery-3.6.4.min.js"></script>
+    <script src="guess-runner.js"></script>
+</body>
+<footer>
+    <div class="footer-left">
+        <p>Created by <a href="https://github.com/jaiocg">Jaio</a></p>
+        <p>Source code available <a href="https://github.com/jaiocg">here</a></p>
+    </div>
+    <div class="footer-right">
+        <p>Autorender created by <a href="https://github.com/mlugg">mlugg</a></p>
+        <p>Source code available <a href="https://github.com/p2sr/portal2-cm-autorender">here</a></p>
+    </div>
+</footer>
+</html>
