@@ -205,3 +205,40 @@ function skip() {
         reset();
     }
 }
+
+
+// Background Buttons code
+
+const theme1Button = document.getElementById('theme1-button');
+const theme2Button = document.getElementById('theme2-button');
+const theme3Button = document.getElementById('theme3-button');
+const theme4Button = document.getElementById('theme4-button');
+const bodyElement = document.getElementsByTagName('body')[0];
+
+theme1Button.addEventListener('click', function() {
+  if (!bodyElement.classList.contains('bg-theme1')) {
+    bodyElement.classList.remove('bg', 'bg-theme2', 'bg-theme3', 'bg-theme4');
+    bodyElement.classList.add('bg-theme1');
+  }
+});
+
+theme2Button.addEventListener('click', function() {
+  if (!bodyElement.classList.contains('bg-theme2')) {
+    bodyElement.classList.remove('bg', 'bg-theme1', 'bg-theme3', 'bg-theme4');
+    bodyElement.classList.add('bg-theme2');
+  }
+});
+
+theme3Button.addEventListener('click', function() {
+  if (!bodyElement.classList.contains('bg-theme3')) {
+    bodyElement.classList.remove('bg', 'bg-theme1', 'bg-theme2', 'bg-theme4');
+    bodyElement.classList.add('bg-theme3');
+  }
+});
+
+theme4Button.addEventListener('click', function() {
+  if (!bodyElement.classList.contains('bg-theme4')) {
+    bodyElement.classList.remove('bg', 'bg-theme1', 'bg-theme2', 'bg-theme3');
+    bodyElement.classList.add('bg-theme4');
+  }
+});
